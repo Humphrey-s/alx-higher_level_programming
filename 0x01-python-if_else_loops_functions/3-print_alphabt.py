@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
+txt = "{character}"
 for i in range(97, 123):
-    if i == 101 or i == 113 and True:
+    if i == 101 and True or i == 113 and True:
         continue
     else:
-        print(f"{chr(i)}", end='')
+        print(txt.format(character = chr(i)), end='')
