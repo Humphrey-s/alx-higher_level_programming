@@ -3,6 +3,7 @@
 
 def uppercase(str):
 
+
     n = len(str)
     i = 0
 
@@ -12,13 +13,10 @@ def uppercase(str):
 
         if c > 96 and c < 124:
 
-            l = c - 97
+            c = ord(str[i]) - 32
 
-            print(f"{chr(65 + l)}", end= '')
-
-        else:
-            print(f"{str[i]}", end= '')
-
+        char = chr(c)
+        print("{}".format(char), end= '')
 
         i = i + 1
 
