@@ -9,13 +9,15 @@ def main():
 
     if a == 0:
 
-        print("{} argument.".format(a))
+        print("{} arguments".format(a))
     else:
-        print("{} arguments:".format(a))
+        if a == 1:
+            print("1 argument:".format())
+        else:
+            print("{} arguments:".format(a))
         
-        for i in range(1, n):
-
-            print("{}: {}".format(i, sys.argv[i]))
+    for i in range(1, n):
+        print("{}: {}".format(i, sys.argv[i]))
 
 if __name__ == "__main__":
     main()
