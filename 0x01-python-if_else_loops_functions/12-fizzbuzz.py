@@ -13,7 +13,7 @@ def fizzbuzz():
         else:
             print("{} ".format(i), end= '')
 
-    print("$".format(), end='')
+    #print("".format(), end='')
 
 def main():
     fizzbuzz()
