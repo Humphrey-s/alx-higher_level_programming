@@ -17,13 +17,13 @@ def main():
 
         match op:
             case "+":
-                print("{} + {} = {}".format(a, b, add(a, b)))
+                print("{} {} {} = {}".format(a, op, b, add(a, b)))
             case "-":
-                print("{} - {} = {}".format(a, b, sub(a, b)))
+                print("{} {} {} = {}".format(a, op, b, sub(a, b)))
             case "*":
-                print("{} * {} = {}".format(a, b, mul(a, b)))
+                print("{} {} {} = {}".format(a, op, b, mul(a, b)))
             case "/":
-                print("{} / {} = {}".format(a, b, div(a, b)))
+                print("{} {} {} = {}".format(a, op, b, div(a, b)))
             case _:
                 print("Unknown operator. Available operators: +, -, * and /".format())
                 sys.exit(1)
