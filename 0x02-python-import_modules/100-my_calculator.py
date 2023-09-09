@@ -7,7 +7,7 @@ def main():
 
     ln = len(sys.argv)
 
-    if ln == 1 or ln == 2 or ln == 3 or ln > 4:
+    if ln != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>".format())
         sys.exit(1)
     else:
