@@ -6,35 +6,22 @@ def add_tuple(tuple_a=(), tuple_b=()):
     n = len(tuple_a)
     n1 = len(tuple_b)
 
-    n_tuple = ()
+    new_tuple = ()
 
-    if n > n1:
+    if n < 2:
 
-        for i in range(n - n1):
-
-            tuple_b += 0,
-
-        for a in range(len(tuple_a)):
-
-            n_tuple += tuple_a[a] + tuple_b[a],
-
-        return n_tuple
-
-    elif n < n1:
-        
-        for i in range(n1 - n):
+        for i in range(2):
 
             tuple_a += 0,
 
-        for a in range(len(tuple_a)):
+    if n1 < 2:
 
-            new_tuple += tuple_a[a] + tuple_b[a],
+        for i in range(2):
 
-        return n_tuple
-    else:
+            tuple_b += 0,
 
-        for i in range(len(tuple_a)):
 
-            n_tuple += tuple_a[i] + tuple_b[i],
+    new_tuple += tuple_a[0] + tuple_b[0],
+    new_tuple += tuple_a[1] + tuple_b[1],
 
-        return n_tuple
+    return new_tuple
