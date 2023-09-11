@@ -4,6 +4,7 @@ def print_matrix_integer(matrix=[[]]):
 
     n = len(matrix)
     ls = "{:d}"
+    space = "{:s}"
 
     for i in range(n):
 
@@ -17,7 +18,7 @@ def print_matrix_integer(matrix=[[]]):
 
             if a != n - 1:
 
-                print(" ", end= '')
+                print(space.format(" "), end= '')
 
 
         print("")
