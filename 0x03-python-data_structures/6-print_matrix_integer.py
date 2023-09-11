@@ -3,7 +3,7 @@
 def print_matrix_integer(matrix=[[]]):
 
     n = len(matrix)
-    ls = "{integer}"
+    ls = "{:d}"
 
     for i in range(n):
 
@@ -13,7 +13,7 @@ def print_matrix_integer(matrix=[[]]):
 
         for a in range(n1):
 
-            print(ls.format(integer = lis_t[a]), end= '')
+            print(ls.format(lis_t[a]), end= '')
 
             if a != n - 1:
 
