@@ -14,8 +14,9 @@ def print_matrix_integer(matrix=[[]]):
 
             print("{:d}".format(lis_t[a]), end= '')
 
-            if a != n:
+            if a != n - 1:
 
                 print(" ", end= '')
+
 
         print("")
