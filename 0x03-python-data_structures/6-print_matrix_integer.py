@@ -9,16 +9,13 @@ def print_matrix_integer(matrix=[[]]):
     for i in range(n):
 
         lis_t = matrix[i]
-        
         n1 = len(lis_t)
 
         for a in range(n1):
 
-            print(ls.format(lis_t[a]), end= '')
+            print(ls.format(lis_t[a]), end='')
 
             if a != n - 1:
 
-                print(space.format(""), end= '')
-
-
+                print(space.format(" "), end='')
         print("")
