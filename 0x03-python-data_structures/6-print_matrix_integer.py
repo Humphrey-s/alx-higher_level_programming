@@ -6,6 +6,10 @@ def print_matrix_integer(matrix=[[]]):
     ls = "{:d}"
     space = "{:s}"
 
+    if matrix == None:
+
+        print(ls.format(""), end='')
+
     for i in range(n):
 
         lis_t = matrix[i]
