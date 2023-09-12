@@ -6,29 +6,17 @@ def print_matrix_integer(matrix=[[]]):
     ls = "{:d}"
     space = "{:s}"
 
-    if matrix == None:
-
-        print(ls.format(""), end='')
-
     for i in range(n):
 
         lis_t = matrix[i]
         n1 = len(lis_t)
 
-        if n > 1 or n < 1:
+        for a in range(n1):
 
-            for a in range(n1):
+            print(ls.format(lis_t[a]), end='')
 
-                print(ls.format(lis_t[a]), end='')
+            if a != n1 - 1:
 
-                if a != n - 1:
+                print(space.format(" "), end='')
 
-                    print(space.format(" "), end='')
-
-            print("")
-
-        elif n == 1:
-
-            for d in range(n1):
-
-                print(ls.format(lis_t[d]))
+        print("")
