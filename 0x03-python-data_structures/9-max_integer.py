@@ -30,4 +30,3 @@ def max_integer(my_list=[]):
                 max_n[0] = max_n[0]
 
         return max_n[0]
-
