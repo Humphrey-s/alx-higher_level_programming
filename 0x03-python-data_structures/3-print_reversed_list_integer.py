@@ -3,12 +3,21 @@
 def print_reversed_list_integer(my_list=[]):
 
     lst = "{:d}"
-    n = len(my_list)
 
-    if n < 0 or n == 0:
+    if my_list == None:
 
-        print("".format(), end= '')
+        print("".format(), end='')
 
-    for i in reversed(range(n)):
+    else:
 
-        print(lst.format(my_list[i]))
+        n = len(my_list)
+
+        if n < 0 or n == 0:
+
+            print("".format(), end='')
+
+        else:
+
+            for i in reversed(range(n)):
+
+                print(lst.format(my_list[i]))
