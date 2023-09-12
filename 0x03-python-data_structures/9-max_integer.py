@@ -10,15 +10,9 @@ def max_integer(my_list=[]):
 
     max_n = [-1024]
 
-    for i in range(n):
+    if n == 0:
 
-        if max_n[0] < my_list[i]:
+        return
+    elif n == 1:
 
-            max_n[0] = my_list[i]
-
-        elif max_n[0] >= my_list[i]:
-
-            max_n[0] = max_n[0]
-            continue
-
-    return max_n
+        return my_list[0]
