@@ -23,7 +23,7 @@ def print_matrix_integer(matrix=[[]]):
 
             print("")
 
-        elif n < 1:
+        elif n <= 1:
 
             for d in range(n1):
 
