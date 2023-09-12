@@ -11,11 +11,20 @@ def print_matrix_integer(matrix=[[]]):
         lis_t = matrix[i]
         n1 = len(lis_t)
 
-        for a in range(n1):
+        if n > 1:
 
-            print(ls.format(lis_t[a]), end='')
+            for a in range(n1):
 
-            if a != n - 1:
+                print(ls.format(lis_t[a]), end='')
 
-                print(space.format(" "), end='')
-        print("")
+                if a != n - 1:
+
+                    print(space.format(" "), end='')
+
+            print("")
+
+        elif n < 1:
+
+            for d in range(n1):
+
+                print(ls.format(lis_t[d]))
