@@ -8,6 +8,9 @@ def element_at(my_list, idx):
 
         return None
 
+    elif idx == n:
+
+
+        return my_list[n - 1]
     else:
-        
         return my_list[idx]
