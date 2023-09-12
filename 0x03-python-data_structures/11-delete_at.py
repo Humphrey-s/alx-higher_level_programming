@@ -4,9 +4,12 @@ def delete_at(my_list=[], idx=0):
 
     n = len(my_list)
 
-    if idx < 0 or n == 0 or idx > n:
+    if idx < 0 or idx > n:
 
         return my_list
+    elif n == 0:
+
+        return None
     else:
 
         del(my_list[idx])
