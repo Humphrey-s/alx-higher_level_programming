@@ -8,7 +8,7 @@ def multiple_returns(sentence):
 
     if n == 0:
 
-        return
+        return 0, None
 
     else:
 
