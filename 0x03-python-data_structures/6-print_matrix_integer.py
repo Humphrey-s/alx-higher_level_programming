@@ -18,7 +18,7 @@ def print_matrix_integer(matrix=[[]]):
 
             if a != n - 1:
 
-                print(space.format(" "), end= '')
+                print(space.format(""), end= '')
 
 
         print("")
