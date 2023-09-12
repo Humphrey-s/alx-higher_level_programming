@@ -9,7 +9,7 @@ def delete_at(my_list=[], idx=0):
         return my_list
     elif n == 0:
 
-        return None
+        return my_list
     else:
 
         del(my_list[idx])
