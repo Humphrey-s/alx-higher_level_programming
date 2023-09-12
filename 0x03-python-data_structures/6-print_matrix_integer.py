@@ -11,7 +11,7 @@ def print_matrix_integer(matrix=[[]]):
         lis_t = matrix[i]
         n1 = len(lis_t)
 
-        if n > 1:
+        if n > 1 or n < 1:
 
             for a in range(n1):
 
@@ -23,7 +23,7 @@ def print_matrix_integer(matrix=[[]]):
 
             print("")
 
-        elif n <= 1:
+        elif n == 1:
 
             for d in range(n1):
 
