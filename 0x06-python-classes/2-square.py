@@ -10,7 +10,6 @@ class Square:
 
         Args:
             size: size of square
-
         """
 
         if isinstance(size, int):
