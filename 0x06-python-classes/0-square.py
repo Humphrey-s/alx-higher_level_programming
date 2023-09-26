@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
-class Square:
-    """a Square class that does nothing
+"""Defining a class."""
 
-    Class has no attributes
-    """
+class Square:
+    """Initializing the class."""
     pass
