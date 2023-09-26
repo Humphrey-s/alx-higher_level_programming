@@ -9,8 +9,6 @@ class Square:
         """initializing the class
 
         Args:
-             
-             size (int): square size
+            size (int): square size
         """
         self.__size = size
-
