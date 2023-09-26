@@ -9,7 +9,7 @@ class Square:
         """Initializing
 
         Args:
-            size: size of square
+            size (int): size of square
         """
 
         if isinstance(size, int):
