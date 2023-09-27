@@ -40,12 +40,14 @@ class Square:
         else:
             for i in range(0, self.__size):
 
-                for d in range(0, p[0]):
+                if self.__size is not 0 or self.__size < 0:
 
-                    if (p[1] < 0) or not isinstance(p[1], int):
-                        break
-                    else:
-                        print(" ", end='')
+                    for d in range(0, p[0]):
+
+                        if (p[1] < 0) or not isinstance(p[1], int):
+                            break
+                        else:
+                            print(" ", end='')
 
                 for a in range(0, self.__size):
 
