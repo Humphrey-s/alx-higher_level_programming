@@ -42,7 +42,7 @@ class Square:
 
                 for d in range(0, p[0]):
 
-                    if (p[1] > 0):
+                    if (p[1] < 0):
                         break
                     else:
                         print(" ", end='')
