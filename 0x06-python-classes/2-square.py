@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Building a Class"""
 
+
 class Square:
     """Defining a Class Square"""
-
 
     def __init__(self, size=0):
         """Initializing

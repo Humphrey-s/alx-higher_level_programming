@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Representation of a Class."""
 
+
 class Square:
     """Defining Square."""
 
@@ -21,7 +22,7 @@ class Square:
 
         else:
             raise TypeError("size must be an integer")
-    
+
     def area(self):
 
         a = self.__size

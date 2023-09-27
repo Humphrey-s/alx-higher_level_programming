@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Set/ build class."""
 
+
 class Square:
     """Definition."""
 
@@ -10,13 +11,13 @@ class Square:
 
     @property
     def size(self):
-
         return self.__size
+
     @size.setter
     def size(self, size):
 
         if isinstance(size, int):
-            
+
             if size < 0:
                 raise ValueError("size must be >= 0")
             else:
