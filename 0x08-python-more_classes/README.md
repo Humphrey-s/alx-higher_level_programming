@@ -1,0 +1,1 @@
+class inheritance && static variables
