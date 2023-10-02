@@ -5,12 +5,13 @@
 class Rectangle:
     """Defining Rectangle Class."""
 
-
     def __init__(self, width=0, height=0):
         """initializing instance attributes."""
 
         self.width = width
         self.height = height
+
+        self.string = ""
 
     @property
     def width(self):
@@ -82,4 +83,12 @@ class Rectangle:
 
             return ""
 
-        return string
+        self.string = string
+
+        return self.string
+
+    def __repr__(self):
+
+        b = "Rectangle" + "(" + str(self.width) + "," + str(self.height) + ")"
+
+        return b
