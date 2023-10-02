@@ -73,7 +73,9 @@ class Rectangle:
 
                 string += "#"
 
-            string += "\n"
+            if i + 1 != h:
+
+                string += "\n"
 
         if h == 0 or w == 0:
 
