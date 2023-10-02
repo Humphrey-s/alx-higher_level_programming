@@ -89,6 +89,6 @@ class Rectangle:
 
     def __repr__(self):
 
-        b = "Rectangle" + "(" + str(self.width) + "," + str(self.height) + ")"
+        b = "Rectangle" + "(" + str(self.width) + ", " + str(self.height) + ")"
 
         return b
