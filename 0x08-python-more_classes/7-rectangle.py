@@ -73,25 +73,13 @@ class Rectangle:
         h = self.__height
         w = self.__width
 
-        if isinstance(self.print_symbol, list):
-
-            string = []
-
-            for i in range(0, h):
-
-                for i in range(0, w):
-
-                    string.append(self.print_symbol)
-
-            return str(string)
-
         string = ""
 
         for i in range(0, h):
 
             for a in range(0, w):
 
-                string += self.print_symbol
+                string += str(self.print_symbol)
 
             if i + 1 != h:
 
