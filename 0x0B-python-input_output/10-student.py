@@ -12,11 +12,11 @@ class Student():
         self.age = age
 
     def to_json(self, attrs=None):
-        
+
         p = self.__dict__
         d = {}
 
-        if attrs == None:
+        if attrs is None:
             return p
 
         for i in range(0, len(attrs)):
@@ -27,7 +27,7 @@ class Student():
                     d["first_name"] = self.first_name
 
                 if attrs[i] == "last_name":
-                    
+
                     d["last_name"] = self.last_name
 
                 if attrs[i] == "age":
