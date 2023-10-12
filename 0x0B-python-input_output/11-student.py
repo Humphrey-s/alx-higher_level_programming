@@ -40,4 +40,8 @@ class Student():
 
         p = str(json)
         s = dict(json)
-        self.__init__(s["first_name"], s["last_name"], s["age"])
+
+        if len(s) == 0:
+            pass
+        else:
+            self.__init__(s["first_name"], s["last_name"], s["age"])
