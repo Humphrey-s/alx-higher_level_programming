@@ -3,7 +3,7 @@
 
 
 def pascal_triangle(n):
-
+    """Returns a list of pascal triangle."""
     dl = []
     lld = []
     b = []
