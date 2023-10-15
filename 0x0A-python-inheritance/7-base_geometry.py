@@ -4,6 +4,7 @@
 
 class BaseGeometry:
     """Class of area, per and etc."""
+
     def area(self):
         raise Exception("area() is not implemented")
 
@@ -11,9 +12,9 @@ class BaseGeometry:
 
         if isinstance(value, int):
 
-            if value >= 0:
+            if value > 0:
                 pass
             else:
-                raise ValueError("<name> must be greater than 0")
+                raise ValueError("{} must be greater than 0".format(name))
         else:
-            raise TypeError("<name> must be an integer")
+            raise TypeError("{} must be an integer".format(name))
