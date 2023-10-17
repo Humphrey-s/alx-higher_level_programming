@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Definition  Rectangle subclass."""
 from models.base import Base
+import json
 
 
 class Rectangle(Base):
@@ -181,4 +182,9 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """convert class to dict/json"""
-        return self.__dict__
+
+        d = {"x": self.__x, "y": self.__y, "id": self.id}
+        d["height"] = self.__height
+        d["width"] = self.__width
+
+        return d
