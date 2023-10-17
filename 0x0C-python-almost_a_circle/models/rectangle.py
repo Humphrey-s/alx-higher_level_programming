@@ -130,7 +130,13 @@ class Rectangle(Base):
 
         string = "[" + str(self.__class__.__name__) + "] ("
         string += str(self.id) + ") " + str(self.__x) + "/" + str(self.__y)
-        string += " - " + str(self.__width) + "/" + str(self.__height)
+        string += " - "
+
+        if self.__width == self.__height:
+
+            string += str(self.__width)
+        else:
+            string += str(self.__width) + "/" + str(self.__height)
 
         return string
 
