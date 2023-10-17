@@ -58,3 +58,10 @@ class Square(Rectangle):
             if key == "y":
 
                 self.y = kwargs[key]
+
+    def to_dictionary(self):
+
+        s = str(self)
+        p = dict(s)
+
+        return p

@@ -178,3 +178,7 @@ class Rectangle(Base):
             if key == "y":
 
                 self.__y = kwargs[key]
+
+    def to_dictionary(self):
+        """convert class to dict/json"""
+        return self.__dict__
