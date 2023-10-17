@@ -60,7 +60,7 @@ class Square(Rectangle):
                 self.y = kwargs[key]
 
     def to_dictionary(self):
-
+        """square to dict"""
         d = {"id": self.id, "x": self.x, "size": self.width, "id": self.id}
         d["y"] = self.y
 
