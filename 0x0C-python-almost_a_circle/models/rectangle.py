@@ -137,20 +137,20 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """set new values to attributes"""
 
-        for i in range(len(args)):
 
-            if i == 0:
-                self.id = args[i]
-            if i == 1:
-                self.__width = args[i]
-            if i == 2:
-                self.__height = args[i]
+        if kwargs is None:
 
-            if i == 3:
-                self.__x = args[i]
-
-            if i == 4:
-                self.__y = args[i]
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[i]
+                if i == 1:
+                    self.__width = args[i]
+                if i == 2:
+                    self.__height = args[i]
+                if i == 3:
+                    self.__x = args[i]
+                if i == 4:
+                    self.__y = args[i]
 
         for key in kwargs:
 
