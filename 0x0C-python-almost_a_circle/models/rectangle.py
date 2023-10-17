@@ -7,7 +7,7 @@ class Rectangle(Base):
     """Subclass Rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-
+        """initialization"""
         super().__init__(id)
 
         self.width = width
@@ -17,10 +17,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """getter width"""
         return self.__width
 
     @width.setter
     def width(self, width):
+        """setter width"""
 
         n = width
         if isinstance(n, int):
@@ -35,10 +37,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """getter height"""
         return self.__height
 
     @height.setter
     def height(self, height):
+        """height setter"""
 
         n = height
 
@@ -55,10 +59,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """x co-ordinate getter"""
         return self.__x
 
     @x.setter
     def x(self, x):
+        """x co-ordinate setter"""
 
         if isinstance(x, int):
 
@@ -73,10 +79,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """y co-ordinate getter"""
         return self.__x
 
     @y.setter
     def y(self, y):
+        """y co-ordinate setter"""
 
         if isinstance(y, int):
 
@@ -90,10 +98,12 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
 
     def area(self):
+        """returns area"""
 
         return self.__height * self.__width
 
     def display(self):
+        """Draws the Rectangle using #"""
 
         a = self.__height
         b = self.__width
@@ -116,6 +126,7 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """prints the Rectangle object"""
 
         string = "[" + str(self.__class__.__name__) + "] ("
         string += str(self.id) + ") " + str(self.__x) + "/" + str(self.__y)
@@ -124,6 +135,7 @@ class Rectangle(Base):
         return string
 
     def update(self, *args, **kwargs):
+        """set new values to attributes"""
 
         for i in range(len(args)):
 
