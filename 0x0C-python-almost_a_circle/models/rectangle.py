@@ -137,8 +137,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """set new values to attributes"""
 
-
-        if kwargs is None:
+        if args is not None:
 
             for i in range(len(args)):
                 if i == 0:
