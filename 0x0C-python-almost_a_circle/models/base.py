@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Definition Base class."""
 import json
+import os
 
 
 class Base:
@@ -74,3 +75,27 @@ class Base:
             r.update(size=b["size"], x=b["x"], y=b["y"], id=b["id"])
 
             return r
+
+    @classmethod
+    def load_from_file(cls):
+
+        file = cls.__name__ + ".json"
+
+        with open(file, "r", encoding="utf-8") as f:
+
+            cts = f.read()
+
+            if cts == "\n":
+                pass
+
+            ld = Base.from_json_string(cts)
+
+            lr = []
+
+            for i in ld:
+
+                r = cls.create(**i)
+
+                lr.append(r)
+
+            return lr
