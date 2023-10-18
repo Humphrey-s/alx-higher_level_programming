@@ -55,3 +55,22 @@ class Base:
             p = json.loads(json_string)
 
             return p
+
+    @classmethod
+    def create(cls, **dictionaries):
+        """return self with new attributes"""
+        b = dictionaries
+
+        if (cls.__name__ == "Rectangle"):
+            r = cls(9, 9, 9, 9, 9)
+            r.update(height=b["height"], width=b["width"])
+            r.update(x=b["x"], y=b["y"], id=b["id"])
+            return r
+
+        else:
+
+            r = cls(9, 9, 9, 9)
+
+            r.update(size=b["size"], x=b["x"], y=b["y"], id=b["id"])
+
+            return r
