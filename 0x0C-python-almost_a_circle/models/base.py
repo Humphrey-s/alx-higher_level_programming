@@ -81,6 +81,9 @@ class Base:
 
         file = cls.__name__ + ".json"
 
+        if not os.path.exists(file) or os.path.getsize(file) == 0:
+            return []
+
         with open(file, "r", encoding="utf-8") as f:
 
             cts = f.read()
