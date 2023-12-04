@@ -4,10 +4,13 @@
 class Rectangle:
     """Create rectangle shapes"""
 
+    number_of_instances = 0
+    print_symbol = "#"
     def __init__(self, width=0, height=0):
 
         self.__width = width
         self.__height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def height(self):
@@ -49,13 +52,39 @@ class Rectangle:
 
         return 2 * (self.__width + self.__height)
 
+    @static_method
+    def bigger_or_equal(rect_1, rect_2):
+
+        try:
+            area_1 = rect_1.area()
+            area_2 = rect_2.area()
+
+            if area_1 => area_2:
+                return rect_1
+
+            if area_2 > area_1:
+                return area_2
+        except:
+            if not isinstance(area_1, Rectangle):
+                raise TypeError("rect_1 must be an instance of Rectangle")
+            if not isinstance(area_2, Rectangle):
+                raise TypeError("rect_2 must be an instance of Rectangle")
+
     def __str__(self):
         rec = ""
         for i in range(0, self.__height):
             for a in range(0, self.__width):
-                rec += "#"
+                if isinstance(self.print_symbol, str):
+                    rec += self.print_symbol
+                else:
+                    rec += str(self.print_symbol)
             rec += "\n"
         return rec
 
     def __repr__(self):
         return f'Rectangle({self.__width}, {self.__height})'
+
+    def  __del__(self):
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
+
