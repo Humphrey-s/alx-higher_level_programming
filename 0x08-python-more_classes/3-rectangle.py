@@ -60,7 +60,8 @@ class Rectangle:
         rec = ""
 
         if self.__height <= 0 or self.__width <= 0:
-            pass
+            return "\n"
+
         for i in range(0, self.__height):
 
             for a in range(0, self.__width):
