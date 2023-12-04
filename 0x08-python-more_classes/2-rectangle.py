@@ -7,6 +7,11 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
 
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+
         self.__width = width
         self.__height = height
 
@@ -50,3 +55,19 @@ class Rectangle:
             return 0
 
         return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        rec = ""
+
+        if self.__height <= 0 or self.__width <= 0:
+            return rec
+
+        for i in range(0, self.__height):
+
+            for a in range(0, self.__width):
+                rec += "#"
+
+            if i + 1 != self.__height:
+                rec += "\n"
+
+        return rec
