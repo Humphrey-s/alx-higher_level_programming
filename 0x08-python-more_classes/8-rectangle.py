@@ -68,9 +68,9 @@ class Rectangle:
             if area_2 > area_1:
                 return area_2
         except Exception as e:
-            if not isinstance(area_1, Rectangle):
+            if not isinstance(rect_1, Rectangle):
                 raise TypeError("rect_1 must be an instance of Rectangle")
-            if not isinstance(area_2, Rectangle):
+            if not isinstance(rect_2, Rectangle):
                 raise TypeError("rect_2 must be an instance of Rectangle")
 
     def __str__(self):
