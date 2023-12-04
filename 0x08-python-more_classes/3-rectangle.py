@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Definition class Rectangle"""
 
+
 class Rectangle:
     """Create rectangle shapes"""
 
@@ -27,6 +28,7 @@ class Rectangle:
     @property
     def width(self):
         return self.__width
+
     @width.setter
     def width(self, width):
 
@@ -55,6 +57,8 @@ class Rectangle:
 
             for a in range(0, self.__width):
                 rec += "#"
-            rec += "\n"
+
+            if i + 1 != self.__height:
+                rec += "\n"
 
         return rec
