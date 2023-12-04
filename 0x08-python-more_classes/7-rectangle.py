@@ -52,14 +52,14 @@ class Rectangle:
 
         return 2 * (self.__width + self.__height)
 
-    @static_method
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
 
         try:
             area_1 = rect_1.area()
             area_2 = rect_2.area()
 
-            if area_1 => area_2:
+            if area_1 == area_2 or area_1 > area_2:
                 return rect_1
 
             if area_2 > area_1:
