@@ -24,7 +24,7 @@ def matrix_divided(cmatrix, div):
     matrix = llcopy(cmatrix)
 
     if div == 0:
-        raise ZeroDivisionError("division by 0")
+        raise ZeroDivisionError("division by zero")
 
     if not isinstance(matrix, list) or len(matrix) == 0 or matrix is None:
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
