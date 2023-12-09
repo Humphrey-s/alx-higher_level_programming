@@ -15,19 +15,10 @@ def add_integer(a, b=98):
             return a + int(b)
         else:
             return a + b
-    except TypeError:
 
-        if a is None:
-            raise TypeError("a must be an integer")
-        if b is None:
-            raise TypeError("b must be an integer")
-
-        if not isinstance(a, int) and not isinstance(a, float):
-            raise TypeError("a must be an integer")
-
-        if not isinstance(b, int) and not isinstance(b, float):
-            raise TypeError("b must be an integer")
-        else:
-            raise TypeError("a must be an integer")
     except Exception as e:
-        raise TypeError("a must be an integer")
+
+        if a is None or (type(a) is not int and type(a) is not float):
+            raise TypeError("a must be an integer")
+        if b is None or (type(b) is not int and type(b) is not float):
+            raise TypeError("b must be an integer")
