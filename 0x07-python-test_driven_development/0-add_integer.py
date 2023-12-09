@@ -15,7 +15,7 @@ def add_integer(a, b=98):
             return a + int(b)
         else:
             return a + b
-    except Exception as e:
+    except TypeError:
 
         if a is None:
             raise TypeError("a must be an integer")
@@ -29,3 +29,5 @@ def add_integer(a, b=98):
             raise TypeError("b must be an integer")
         else:
             raise TypeError("a must be an integer")
+    except Exception as e:
+        raise TypeError("a must be an integer")
