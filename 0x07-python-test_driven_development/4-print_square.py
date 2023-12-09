@@ -34,5 +34,5 @@ def print_square(size):
                 if h + 1 != size:
                     square += "\n"
             print(square)
-    except TypeError:
+    except Exception as e:
         raise TypeError("size must be an integer")
