@@ -18,12 +18,15 @@ def print_square(size):
 
     else:
         square = ""
+        w = 0
 
         for h in range(0, size):
 
-            for l in range(0, size):
+            while w < size:
                 square += "#"
+                w = w + 1
 
+            w = 0
             if h + 1 != size:
                 square += "\n"
 
