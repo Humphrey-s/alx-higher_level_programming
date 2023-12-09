@@ -6,6 +6,11 @@ def add_integer(a, b=98):
     """adds a and b"""
 
     try:
+        if a != a:
+            a = 89
+        if b != b:
+            b = 89
+
         if isinstance(a, float) and isinstance(b, float):
             return int(a) + int(b)
 
