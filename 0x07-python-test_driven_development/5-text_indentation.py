@@ -10,13 +10,19 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     a = 0
+    b = ""
     for i in text:
 
         if a == 0 and i == " ":
+            b = i
+            continue
+
+        if i == ' ' and (b == '.' or b == '?' or b == ':'):
             continue
 
         print(i, end='')
         a = 9
+        b = i
 
         if i == '.' or i == '?' or i == ':':
             print("\n")
