@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""definition function add_integer"""
 
 
 def add_integer(a, b=98):
@@ -26,3 +27,5 @@ def add_integer(a, b=98):
 
         if not isinstance(b, int) and not isinstance(b, float):
             raise TypeError("b must be an integer")
+        else:
+            raise TypeError("a must be an integer")
