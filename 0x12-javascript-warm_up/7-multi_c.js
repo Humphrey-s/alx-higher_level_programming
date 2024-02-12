@@ -2,14 +2,9 @@
 
 const args = process.argv;
 
-if (!args[2]) {
-  console.log('Missing number of occurrences');
-  process.exit();
-}
-
 const count = Number(args[2]);
 
-if (isNaN(count) === true) {
+if (isNaN(count) === true || !args[2]) {
   console.log('Missing number of occurrences');
   process.exit();
 }
