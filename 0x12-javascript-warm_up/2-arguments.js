@@ -12,7 +12,11 @@ while (it <= 5) {
 }
 
 if (it === 3) {
-  console.log('Arguments found');
+  console.log('Argument found');
 } else {
-  console.log('No Argument');
+  if (it > 3) {
+    console.log('Arguments found');
+  } else {
+    console.log('No Argument');
+  }
 }
