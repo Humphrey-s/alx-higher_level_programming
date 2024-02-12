@@ -13,10 +13,8 @@ while (it <= 5) {
 
 if (it === 3) {
   console.log('Argument found');
-} else {
-  if (it > 3) {
+} else if (it > 3) {
     console.log('Arguments found');
-  } else {
-    console.log('No Argument');
-  }
+} else {
+  console.log('No Argument');
 }
