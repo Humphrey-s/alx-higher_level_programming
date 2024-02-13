@@ -11,10 +11,10 @@ class Square extends Rectangle {
     let h = 0;
     let w;
     let square;
-    let charP = 'X';
+    let charP = c;
 
-    if (typeof (c) !== 'undefined') {
-      charP = 'C';
+    if (typeof (c) === 'undefined') {
+      charP = 'X';
     }
     while (h < this.size) {
       w = 0;
