@@ -6,16 +6,21 @@ class Square extends Rectangle {
     super(size, size);
     this.size = size;
   }
-  charPrint () {
+
+  charPrint (c) {
     let h = 0;
     let w;
     let square;
+    let charP = 'X';
 
+    if (typeof (c) !== 'undefined') {
+      charP = 'C';
+    }
     while (h < this.size) {
       w = 0;
       square = '';
       while (w < this.size) {
-        square = square + 'C';
+        square = square + charP;
         w = w + 1;
       }
       console.log(square);
