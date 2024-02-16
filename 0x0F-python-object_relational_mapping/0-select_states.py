@@ -9,7 +9,7 @@ db_name = sys.argv[3]
 db = _mysql.connect(host="localhost", port=3306, user=username, password=password, database=db_name)
 
 c = db.cursor()
-c.execute("SELECT states.id, states.name FROM {}.states".format(db_name))
+c.execute("SELECT states.id, states.name FROM {}.states ORDER BY states.id ASC".format(db_name))
 
 rows = c.fetchall()
 
