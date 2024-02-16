@@ -13,10 +13,11 @@ def main():
         dbase =MySQLdb.connect(host="localhost", port=3306, user=username, password=password, database=db_name, charset="utf8")
     except Exception:
         print("connection failed")
+        exit(0)
 
     cursor = dbase.cursor()
 
-    cursor.execute("SELECT * FROM {}.states WHERE states.id > 3 ORDER BY states.id ASC;".format(db_name))
+    cursor.execute("SELECT * FROM {}.states WHERE states.name LIKE BINARY 'N%' ORDER BY states.id ASC;".format(db_name))
 
     rows = cursor.fetchall()
 
