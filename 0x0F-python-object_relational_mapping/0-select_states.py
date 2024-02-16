@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+a script that lists all states from the database hbtn_0e_0_usa
+"""
+
 import sys
 import MySQLdb as _mysql
 
@@ -9,7 +13,7 @@ def main():
 
     db = _mysql.connect(charset="utf8", host="localhost", port=3306, user=username, password=password, database=db_name)
     c = db.cursor()
-    c.execute("SELECT states.id, states.name FROM {}.states ORDER BY states.id ASC".format(db_name))
+    c.execute("SELECT * FROM {}.states ORDER BY states.id ASC".format(db_name))
     rows = c.fetchall()
 
     for i in range(0, len(rows)):
