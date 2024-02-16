@@ -19,5 +19,8 @@ def main():
     for row in rows:
         print(row)
 
+    cursor.close()
+    dbase.close()
+
 if __name__ == "__main__":
     main()
