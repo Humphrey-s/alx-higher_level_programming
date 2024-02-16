@@ -7,7 +7,7 @@ def main():
     password = sys.argv[2]
     db_name = sys.argv[3]
 
-    db = _mysql.connect(host="localhost", port=3306, user=username, password=password, database=db_name)
+    db = _mysql.connect(charset="utf8", host="localhost", port=3306, user=username, password=password, database=db_name)
     c = db.cursor()
     c.execute("SELECT states.id, states.name FROM {}.states ORDER BY states.id ASC".format(db_name))
     rows = c.fetchall()
