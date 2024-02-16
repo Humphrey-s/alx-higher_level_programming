@@ -17,7 +17,7 @@ def main():
 
     cursor = dbase.cursor()
 
-    cursor.execute("SELECT * FROM {}.states WHERE states.name = BINARY '{:s}'".format(db_name, state_name))
+    cursor.execute("SELECT * FROM {}.states WHERE states.name = BINARY '{:s}' ORDER BY states.id ASC".format(db_name, state_name))
 
     rows = cursor.fetchall()
 
