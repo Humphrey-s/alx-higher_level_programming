@@ -10,7 +10,7 @@ def main():
     db_name = sys.argv[3]
 
     try:
-        dbase =MySQLdb.connect(host="localhost", port=3306, user=username, password=password, database=db_name, charset="utf8")
+        dbase =MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=db_name, charset="utf8")
     except Exception:
         print("connection failed")
         exit(0)
