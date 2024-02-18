@@ -5,6 +5,7 @@ script that takes in the name of a state as an argument and lists all cities of 
 import MySQLdb as _mysql
 import sys
 
+
 def main():
 
     user = sys.argv[1]
@@ -28,6 +29,7 @@ def main():
                 print(", ", end="")
         except Exception:
             print("")
+
 
 if __name__ == "__main__":
     main()
