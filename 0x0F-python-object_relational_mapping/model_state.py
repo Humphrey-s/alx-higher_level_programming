@@ -10,6 +10,7 @@ import MySQLdb as _mysql
 
 Base = declarative_base()
 
+
 class State(Base):
     """
     State table class
