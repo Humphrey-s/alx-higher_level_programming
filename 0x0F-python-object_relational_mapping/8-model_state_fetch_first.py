@@ -14,12 +14,12 @@ def main():
 
     with Session(engine) as session, session.begin():
 
-        statement = select(State).where(State.id == 1)
+        states = session.query(State).order_by(State.id).first()
 
-        result = session.execute(statement)
-
-        for obj in result.scalars():
-            print("{}: {}".format(obj.id, obj.name))
+        if states is None:
+            print("Nothing")
+        else:
+            print("{}: {}".format(states.id, states.name))
 
 if __name__ == "__main__":
     main()
