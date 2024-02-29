@@ -6,7 +6,6 @@ then
 	exit;
 fi
 
-url=$(curl -s http://$1)
-size=${#url}
+size=$(curl -s $1 | wc -c)
 
 echo "$size"
