@@ -8,7 +8,7 @@ def main():
     url = sys.argv[1]
 
     with request.urlopen(url) as r:
-        print(r.headers["X-Request-Id"])
+        print(dict(r.headers).get("X-Request-Id"))
 
 if __name__ == "__main__":
     main()
