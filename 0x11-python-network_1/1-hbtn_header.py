@@ -3,10 +3,11 @@
 from urllib import request
 import sys
 
-def main():
-    args = sys.argv[1]
 
-    with request.urlopen(args) as r:
+def main():
+    url = sys.argv[1]
+
+    with request.urlopen(url) as r:
         print(r.headers["X-Request-Id"])
 
 if __name__ == "__main__":
