@@ -2,7 +2,8 @@
 """Python script that fetches https://alx-intranet.hbtn.io/status"""
 from urllib import request
 
-def main():
+
+if __name__ == "__main__":
 
     url = request.Request("https://alx-intranet.hbtn.io/status")
 
@@ -13,6 +14,3 @@ def main():
         print("\t- type: {}".format(type(b)))
         print("\t- content: {}".format(b))
         print("\t- utf8 content: {}".format(b.decode("utf-8")))
-
-if __name__ == "__main__":
-    main()
