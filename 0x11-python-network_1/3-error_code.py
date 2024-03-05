@@ -4,14 +4,12 @@ import sys
 from urllib import request
 
 
-def main():
+if __name__ == "__main__":
 
-    with request.urlopen(sys.argv[1]) as r:
+    url = request.Request(sys.argv[1])
+    with request.urlopen(url) as r:
         try:
             print(r.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
             p = e.code
             print("Error code: {}".format(p))
-
-if __name__ == "__main__":
-    main()
