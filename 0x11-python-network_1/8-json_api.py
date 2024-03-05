@@ -11,13 +11,13 @@ if __name__ == "__main__":
     else:
         payload = {"q": sys.argv[1]}
 
-    try:
-        res = requests.post("http://0.0.0.0:5000/search_user", data=payload).json()
+        try:
+            url = "http://0.0.0.0:5000/search_user"
+            res = requests.post(url, data=payload).json()
 
-        if res == {}:
-            print("No result")
-        else:
-            print("[{}] {}".format(res.get("id"), res.get("name")))
-
-    except Exception as e:
-        print("Not a valid JSON")
+            if res == {}:
+                print("No result")
+            else:
+                print("[{}] {}".format(res.get("id"), res.get("name")))
+        except ValueError:
+            print("Not a valid JSON")
