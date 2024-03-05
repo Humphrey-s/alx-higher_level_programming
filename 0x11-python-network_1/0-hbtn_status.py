@@ -12,7 +12,7 @@ def main():
         print("Body response:$")
         print("\t- type: {}".format(type(b)))
         print("\t- content: {}".format(b))
-        print("\t- utf-8 content: {}".format(b.decode("utf-8")))
+        print("\t- utf8 content: {}".format(b.decode("utf-8")))
 
 if __name__ == "__main__":
     main()
