@@ -9,7 +9,7 @@ def main():
     with request.urlopen(url) as r:
 
         b = r.read()
-        print("Body response:")
+        print("Body response:$")
         print("\t- type: ".format(type(b)))
         print("\t- content: {}".format(b))
         print("\t- utf-8 content: {}".format(b.decode("utf-8")))
