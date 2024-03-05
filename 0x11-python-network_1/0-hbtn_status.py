@@ -10,7 +10,7 @@ def main():
 
         b = r.read()
         print("Body response:$")
-        print("\t- type: ".format(type(b)))
+        print("\t- type: {}".format(type(b)))
         print("\t- content: {}".format(b))
         print("\t- utf-8 content: {}".format(b.decode("utf-8")))
 
