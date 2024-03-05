@@ -4,12 +4,15 @@ from urllib import request
 
 def main():
 
-    with request.urlopen("https://alx-intranet.hbtn.io/status") as r:
+    url = request.Request("https://alx-intranet.hbtn.io/status")
+
+    with request.urlopen(url) as r:
+
+        b = r.read()
         print("Body response:")
-        content = r.read().decode("utf-8")
-        print("\t- type: ".format(type(r.read())))
-        print("\t- content: {}".format(r.read()))
-        print("\t- utf-8 content: {}".format(content))
+        print("\t- type: ".format(type(b)))
+        print("\t- content: {}".format(b))
+        print("\t- utf-8 content: {}".format(b.decode("utf-8")))
 
 if __name__ == "__main__":
     main()
