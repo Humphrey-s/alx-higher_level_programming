@@ -16,7 +16,7 @@ request(url, function (error, response, body) {
     const filmCharacters = film.characters;
 
     for (const character of filmCharacters) {
-      if (character === 'https://swapi-api.alx-tools.com/api/people/18/') {
+      if (character.includes('18')) {
         count++;
       }
     }
