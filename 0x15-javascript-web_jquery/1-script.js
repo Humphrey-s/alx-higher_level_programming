@@ -1,3 +1,3 @@
 #!/usr/bin/node
 
-$('header').css("background-color", "#FF0000")
+$('header').css('background-color', '#FF0000');
