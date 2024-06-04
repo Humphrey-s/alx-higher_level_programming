@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """module for matrix multiplication"""
 
+
 def check_list_type(lst):
     """identifies if a list has any other type"""
     for i in lst:
@@ -14,6 +15,8 @@ def check_list_type(lst):
 
     else:
         return 1
+
+
 def check_list_shape(lst):
     """checks if a lst is a rectangle"""
     lst_lengths = []
@@ -27,6 +30,8 @@ def check_list_shape(lst):
             return 0
     else:
         return 1
+
+
 def get_columns(matrix):
     """get columns from a matrix"""
     columns = []
@@ -37,6 +42,7 @@ def get_columns(matrix):
         columns.append(lst)
 
     return columns
+
 
 def matrix_mul(m_a, m_b):
     """multiplies 2 matrix"""
@@ -52,7 +58,7 @@ def matrix_mul(m_a, m_b):
     if check_list_type(m_a) == 0:
         raise TypeError("m_a should contain only integers or floats")
     if check_list_type(m_b) == 0:
-         raise TypeError("m_b should contain only integers or floats")
+        raise TypeError("m_b should contain only integers or floats")
     if check_list_shape(m_a) == 0:
         raise TypeError("each row of m_a must be of the same size")
     if check_list_shape(m_b) == 0:
