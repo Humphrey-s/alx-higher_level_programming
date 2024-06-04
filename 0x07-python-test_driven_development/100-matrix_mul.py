@@ -43,6 +43,11 @@ def get_columns(matrix):
 
     return columns
 
+def list_lists(matrix):
+    """checks if a list is a list of lists"""
+    for lst in matrix:
+        if not isinstance(lst, list):
+            return 0
 
 def matrix_mul(m_a, m_b):
     """multiplies 2 matrix"""
@@ -51,10 +56,17 @@ def matrix_mul(m_a, m_b):
         raise TypeError("m_a must be a list")
     if not isinstance(m_b, list):
         raise TypeError("m_b must be a list")
-    if not m_a:
-        raise ValueError("m_a can't be empty")
-    if not m_b:
-        raise ValueError("m_b can't be empty")
+
+    if list_lists(m_a) == 0:
+        raise TypeError("m_a must be a list of lists")
+    if list_lists(m_b) == 0:
+        raise TypeError("m_b must be a list of lists")
+    for l in m_a:
+        if len(l) == 0:
+            raise ValueError("m_a can't be empty")
+    for l in m_b:
+        if len(l) == 0:
+            raise ValueError("m_b can't be empty")
     if check_list_type(m_a) == 0:
         raise TypeError("m_a should contain only integers or floats")
     if check_list_type(m_b) == 0:
