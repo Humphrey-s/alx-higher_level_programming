@@ -16,4 +16,15 @@ while (i < Number(argv.length)) {
   i++;
 }
 
+const biggest = fArg;
+fArg = Number(argv[2]);
+i = 2;
+
+while (i < Number(argv.length)) {
+  if (fArg < Number(argv[i]) && Number(argv[i]) !== biggest) {
+    fArg = Number(argv[i]);
+  }
+  i++;
+}
+
 console.log(fArg);
