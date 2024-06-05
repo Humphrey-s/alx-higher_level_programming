@@ -3,7 +3,7 @@
 const argv = process.argv;
 let fArg = Number(argv[2]);
 
-if (isNaN(fArg) === true) {
+if (isNaN(fArg) === true || isNaN(argv[3]) === true) {
   console.log(0);
   process.exit();
 }
