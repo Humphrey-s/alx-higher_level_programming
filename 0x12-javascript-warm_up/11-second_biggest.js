@@ -19,6 +19,9 @@ while (i < Number(argv.length)) {
 const biggest = fArg;
 fArg = Number(argv[2]);
 i = 2;
+if (fArg === biggest) {
+  fArg = Number(argv[3]);
+}
 
 while (i < Number(argv.length)) {
   if (fArg < Number(argv[i]) && Number(argv[i]) !== biggest) {
