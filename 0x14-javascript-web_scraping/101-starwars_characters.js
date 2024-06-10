@@ -3,28 +3,24 @@
 const request = require('request');
 
 const id = process.argv[2];
-const url = 'https://swapi-api.alx-tools.com/api/films/';
+const url = 'https://swapi-api.alx-tools.com/api/films/' + id;
 
 request(url, function (error, response, body) {
   if (error) {
     console.error(error);
   }
-  const content = JSON.parse(body);
-  const films = content.results;
+  const characters = JSON.parse(body).characters;
+  consoleChar(characters, 0);
 
-  for (const film of films) {
-    if (film.url.includes(id)) {
-      const characters = film.characters;
-
-      for (let i = 0; i < characters.length; i++) {
-        request(characters[i], function (error, response, body) {
-          if (error) {
-            console.error(error);
-          }
-          const name = JSON.parse(body).name;
-          console.log(name);
-        });
+  function consoleChar (characters, index) {
+    request(characters[index], function (error, response, body) {
+      if (error) {
+        console.error(error);
       }
-    }
+      console.log(JSON.parse(body).name);
+      if ((index + 1) < characters.length) {
+        consoleChar(characters, index + 1);
+      }
+    });
   }
 });
